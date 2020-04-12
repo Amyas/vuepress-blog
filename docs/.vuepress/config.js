@@ -14,6 +14,7 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: 'JavaScript', link: '/JavaScript/' },
+            { text: 'TypeScript', link: '/TypeScript/' },
             // { text: 'JavaScript',
             //   items: [
             //     { text: '学习', link: '/study/' },
@@ -28,7 +29,8 @@ module.exports = {
             '/study/': getFiles('study'),
             '/record/': getFiles('record'),
             '/php/': getFiles('php'),
-            '/JavaScript/': getFiles('JavaScript')
+            '/JavaScript/': getFiles('JavaScript'),
+            '/TypeScript/': getFiles('TypeScript')
             // // fallback
             // '/': [
             //   '',        /* / */
