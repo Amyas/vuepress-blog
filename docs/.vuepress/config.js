@@ -4,7 +4,7 @@ const path = require('path')
 const resolve = dir => path.resolve(__dirname,'../',dir)
 
 const getFiles = path => fs.readdirSync(resolve(path)).map(file=>{
-  if(file === 'README.md') return false
+  if(file === 'README.md') return ''
   return file
 }).sort()
 
