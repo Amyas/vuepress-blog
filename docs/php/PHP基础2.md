@@ -46,17 +46,33 @@ echo __FILE__, '<br />';       // 文件的完整路径和文件夹
 echo __DIR__, '<br />';        // 文件所在的目录
 ```
 
-## 数据类型 - 整形
+## 数据类型 - 数组
 
 ``` php
+// 1、索引数组的声明
+$stu = array('tom','jack','amyas'); // 索引数组
+print_r($stu);   // 只打印值
+echo '<br />';
+var_dump($stu);  // 打印详细信息 
+echo '<br />';
+echo $stu[0], '<br />';    // tom
+echo $stu[1], '<br />';    // jack
+echo $stu[2], '<hr />';    // amyas
 
+// 2、关联数组
+$emp = array('name'=>'Amyas','sex'=>'男','age'=>23);
+print_r($emp);
+echo '<br />';
+echo $emp['name'], '<br />'; // Amyas
+echo $emp['sex'], '<br />';  // 男
+echo $emp['age'], '<br />';  // 23
 ```
 
-## 数据类型 - 浮点型
-
-## 数据类型 - 布尔、字符串
-
-## 数据类型 - 数组
+::: tip 小结
+1. 数组有两种形式
+   + 索引数组（用整数做下标，默认从0开始，后面依次加一）
+   + 关联数组（用字符串做下标，用过`=>`关联起来）
+:::
 
 ## 数据类型 - 数组下标
 
