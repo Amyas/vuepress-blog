@@ -15,6 +15,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: 'JavaScript', link: '/JavaScript/' },
             { text: 'TypeScript', link: '/TypeScript/' },
+            { text: 'TODO', link: '/todo/' },
             // { text: 'JavaScript',
             //   items: [
             //     { text: '学习', link: '/study/' },
@@ -30,7 +31,8 @@ module.exports = {
             '/record/': getFiles('record'),
             '/php/': getFiles('php'),
             '/JavaScript/': getFiles('JavaScript'),
-            '/TypeScript/': getFiles('TypeScript')
+            '/TypeScript/': getFiles('TypeScript'),
+            '/Todo/': getFiles('todo')
             // // fallback
             // '/': [
             //   '',        /* / */
