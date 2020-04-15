@@ -40,7 +40,7 @@ module.exports = {
             //   'about'    /* /about.html */
             // ]
         },
-        // sidebarDepth: 2,
+        sidebarDepth: 5,
         lastUpdated: 'Last Updated', 
     }
 }
