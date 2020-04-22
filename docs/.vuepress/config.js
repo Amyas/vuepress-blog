@@ -16,12 +16,12 @@ module.exports = {
             { text: 'JavaScript', link: '/JavaScript/' },
             { text: 'TypeScript', link: '/TypeScript/' },
             { text: 'TODO', link: '/todo/' },
-            // { text: 'JavaScript',
-            //   items: [
-            //     { text: '学习', link: '/study/' },
-            //     { text: '记录', link: '/record/' }
-            //   ]
-            // },
+            { text: '笔记',
+              items: [
+                { text: '学习', link: '/study/' },
+                { text: '记录', link: '/record/' }
+              ]
+            },
             { text: 'PHP', link: '/php/' },
             { text: '关于', link: '/about/' },
             { text: 'Github', link: 'https://www.github.com/amyas' },
