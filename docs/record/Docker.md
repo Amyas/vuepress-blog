@@ -14,11 +14,9 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-
-
 ## 镜像操作
 
-``` bash
+```bash
 # 镜像列表
 docker image ls
 
@@ -32,8 +30,6 @@ docker rmi (IMAGE_ID || REPOSITORY)
 # IMAGE_ID: 镜像ID
 # REPOSITORY: 镜像名称
 ```
-
-
 
 ## 容器操作
 
@@ -70,7 +66,7 @@ docker stop (CONTAINER_ID || CONTAINER_NAME)
 # 查看容器日志
 docker logs  (CONTAINER_ID || CONTAINER_NAME)
 
-# 创建容器 
+# 创建容器
 docker run --name web -d -it -p 8000:80 nginx
 # -d --detach: 后台运行
 # -i --interactive: 可交互
@@ -101,10 +97,9 @@ docker cp ./host.txt web:/
 docker commit -m 'add nginx.txt host.txt' -a 'amyas' web amyas/nginx:1.0.0
 ```
 
-
-
 ## 构建镜像
-``` bash
+
+```bash
 #当前目录存在Dockerfile
 docker build -t IMAGE_NAME -f Maker.Dockerfile .
 
@@ -113,12 +108,11 @@ docker build -t IMAGE_NAME -f Maker.Dockerfile .
 # -f: 指定dockerfile的名字，默认为Dockerfile
 ```
 
-
-
 ## Dockerfile
-``` bash
+
+```bash
 # 制定当前镜像基于的镜像 node
-FROM node 
+FROM node
 # 将当前目录的app文件夹复制到容器内的/app目录下
 COPY ./app /app
 # 设置工作目录为/app
@@ -131,22 +125,19 @@ EXPOSE 8000
 CMD node server.js
 ```
 
-
-
 ## 修改镜像名称
 
-``` bash
+```bash
 docker tag 原始镜像ID 修改后的镜像名称
 ```
 
-
-
 ## 坑
 
-> 部署nodejs容器时，容器只写监听端口，不要写本机名，否则容器外无法访问。
+> 部署 nodejs 容器时，容器只写监听端口，不要写本机名，否则容器外无法访问。
 >
-> 写了127.0.0.1就无法访问，其他项目同理
-``` js
+> 写了 127.0.0.1 就无法访问，其他项目同理
+
+```js
 # 错误
 server.listen(port, 127.0.0.1, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
